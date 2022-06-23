@@ -40,7 +40,6 @@ window.addEventListener("DOMContentLoaded", (evento) =>{
 /* Función que valida si no hay campos vacios y compara el usuario con su contraseña */
 const logIn = () => {
     if(elementInputPass == "" || elementInputName.value == ""){
-        // alert("Campos Vacios. Ingresa todos los campos");
         msgError.innerHTML = `Campos Vacios. Ingresa todos los campos`;
         msgError.style.color = "red";
         elementInputPass.style.border = "1px solid red"
@@ -56,7 +55,6 @@ const logIn = () => {
             hidden(divLogIn);
         }else{
             welcomeData.innerHTML =  ``;
-            // alert("Error. Datos invalidos");
             msgError.innerHTML = `Error. Datos invalidos`;
             msgError.style.color = "red";
             elementInputPass.style.border = "1px solid red";
@@ -83,7 +81,6 @@ const deposit = () => {
     if(newCredit > 990){
         elementResult.innerHTML = `<b>Saldo:</b> ${credit}`;
         elementNewResult.innerHTML = `<b>Saldo esperado:</b>${newCredit}`;
-        // alert("Error. No se puede tener más de $990 en la cuenta");
         msgRule.style.color = "red";
         msgRule.innerHTML = `Error. No se puede tener más de $990 en la cuenta`;
     }else{
@@ -103,7 +100,6 @@ const withdrawals = () => {
     if(newCredit < 10){
         elementResult.innerHTML = `<b>Saldo:</b>${credit}`;
         elementNewResult.innerHTML = `<b>Saldo esperado:</b>${newCredit}`;
-        // alert("Error. No se puede tener menos de $10 en la cuenta");
         msgRule.style.color = "red";
         msgRule.innerHTML = `Error. No se puede tener menos de $10 en la cuenta`;
     }else{
@@ -124,11 +120,12 @@ const hidden = (elemento) => {
     elemento.style.display = 'none';
 }
 
-/* Evento para ingresar */
+/* Evento para iniciar sesión */
 elementBtnLogIn.addEventListener("click", () => {
     logIn();
 });
 
+/* Evento para cerrar sesión */
 elementBtnLogOut.addEventListener("click", () => {
     show(divLogIn);
     hidden(divOptions);
