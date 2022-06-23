@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://kit.fontawesome.com/ace3ef23a1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="title">
+        <h3>ATM</h3>
+    </header>
+
+    <div id="divLogIn" class="inputData">
+        <div class="inputData containerLogin">
+            <div class="inputs">
+                <i class="fa-regular fa-user"></i><label id="label" for="name">Nombre</label>
+                <input type="text" id="name" name="logIn" required placeholder="Nombre"><br>
+                <i class="fa-solid fa-key"></i><label id="label" for="password">contraseña</label>
+                <input type="password" name="logIn" id="password" required placeholder="Contraseña">
+            </div>
+        
+            <div id="messageError" class="inputData containerLogin"></div>
+
+            <div class="buttons inputData">
+                <button id="logIn" type="submit">Iniciar sesión</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="watchData">
+        <div id="data"></div>
+    </div>
+
+    <main class="display">
+        <div class="orientation right">
+            <div class="operations">
+                <div id="options" class="buttons">
+                    <button id="btnConsult">Consultar</button><br>
+                    <button id="btnDeposit">Realizar deposito</button><br>
+                    <button id="btnWithdrawals">Realizar un retiro</button>
+                </div>
+    
+                <div class="actions inputData">
+                     <div id="amountDeposit">
+                        <i id="amount" class="fa-solid fa-money-bill-transfer"></i>
+                        <b><label class="label" for="credit">Monto</label></b>
+                        <input type="numeric" name="credit" id="deposit" required placeholder="Ingresa un monto">
+                        <button id="btnSendDeposit">Depositar</button>
+                    </div>
+                    <div id="amountWithdrawal" class="inputWithdrawal">
+                        <i id="amount" class="fa-solid fa-money-bill-transfer"></i>
+                        <b><label class="label" for="credit">Monto</label></b>
+                        <input type="numeric" name="credit" id="withdrawals" required placeholder="Ingresa un monto">
+                        <button id="btnSendWithdrawals">Retirar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="orientation center" id="divImg">
+            <img id="imageATM" src="./img/atm.webp" alt="atm">
+        </div>
+
+        <div class="orientation left">
+            <div class="show">
+                <div id="results"></div>
+                <div id="newResults"></div>
+                <div id="amountValid"></div>
+                <div id="rule"></div>
+            </div>
+        </div>
+    </main>
+
+    <div id="divLogOut" class="display buttons">
+        <div class="orientation center " id="centerLog">
+            <button id="logOut" type="submit">Cerrar sesión</button>
+        </div>
+    </div>
+    <script src="/main.js"></script>
+</body>
+</html>
