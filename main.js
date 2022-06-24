@@ -28,7 +28,7 @@ let creditInput = 0;
 let indexAccount = -1;
 let newCredit = 0;
 
-/* Evita que cada refresque la página y carga las cuentas al select */
+/* Evita que cada refresque la página y oculta divs */
 window.addEventListener("DOMContentLoaded", (evento) =>{
     evento.preventDefault();
     hidden(divDeposit);
